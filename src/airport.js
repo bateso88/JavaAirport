@@ -19,6 +19,9 @@ class Airport {
   }
 
   clearForLanding(plane) {
+    if(this.isFull()) {
+      throw new Error('Airport is full!');
+    }
     this._hangar.push(plane);
   }
 
