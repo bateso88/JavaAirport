@@ -1,9 +1,9 @@
 "use strict";
 
 class Airport {
-  constructor() {
+  constructor(_maxCapacity = 20) {
     this._hangar = [];
-    this._maxCapacity = 20;
+    this._maxCapacity = _maxCapacity;
   }
 
   land(plane) {

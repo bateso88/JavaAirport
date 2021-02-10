@@ -45,5 +45,11 @@ describe('Airport', function() {
       expect(airport.isFull()).toEqual(false);
     });
   });
+  describe('maxCapacity', function() {
+    it('can be set to a non-default value', function() {
+      let newAirport = new Airport(18);
+      expect(newAirport.capacity()).toEqual(18);
+    });
+  });
 
 });
