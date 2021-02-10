@@ -21,7 +21,7 @@ describe('plane', function() {
     plane.takeoff();
     expect(airport.clearForTakeoff).toHaveBeenCalledWith(plane);
   });
-  it('takes off from an airport', function() {
+  it('takes off from an airport and no longer marks its location as at the airport', function() {
     plane.land(airport);
     plane.takeoff();
     expect(plane.currentAirport()).toEqual(null);
